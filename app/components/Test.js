@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native';
 
 function Test(props) {
     return (
@@ -8,9 +8,7 @@ function Test(props) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-
-    }
-})
+  container: {}
+});
 
 export default Test;
