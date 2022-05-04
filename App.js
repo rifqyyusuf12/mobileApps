@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { 
   StyleSheet, 
   Text, 
@@ -14,6 +14,8 @@ import {
   TextInput,
   Switch,
 } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import * as Permission from 'expo-permissions'
 
 
 import AppCard from './app/components/AppCard';
@@ -31,8 +33,11 @@ import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import ListingEditScreen from './app/screens/ListingEditScreen';
 import AppText from './app/components/AppText';
+import ImageInput from './app/components/ImageInput';
+import ImageInputList from './app/components/ImageInputList';
 
 export default function App() {
+
   return (
     <ListingEditScreen />
   )
