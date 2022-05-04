@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { FlatList, StyleSheet, Platform, StatusBar, View } from 'react-native'
 import Constants from 'expo-constants';
 
-import AppListItem from '../components/AppListItem';
 import Screen from '../components/Screen';
-import ListItemSeparator from '../components/ListItemSeparator';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
+import {
+    AppListItem,
+    ListItemDeleteAction,
+    ListItemSeparator,
+  } from "../components/lists";
 
 
 const initialMessages = [

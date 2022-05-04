@@ -75,7 +75,6 @@ function ListingEditScreen() {
                 />
                 <SubmitButton 
                 title='Post' 
-                onPress={() => console.log('masuk')}
                 />
             </AppForm>
         </Screen>
@@ -83,7 +82,9 @@ function ListingEditScreen() {
 }
 
 const styles = StyleSheet.create({
-    
+    container: {
+        padding: 10,
+      },
 })
 
 export default ListingEditScreen;

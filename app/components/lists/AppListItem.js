@@ -4,8 +4,8 @@ import { Swipeable } from 'react-native-gesture-handler';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 
-import colors from '../config/colors';
-import AppText from './AppText';
+import colors from '../../config/colors';
+import AppText from '../AppText';
 
 function AppListItem({
     title, 
