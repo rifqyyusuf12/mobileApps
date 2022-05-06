@@ -14,7 +14,7 @@ const FeedNavigator = () => (
         }}
     >
         <Stack.Screen name='Listings' component={ListingScreen}/>
-        <Stack.Screen name='ListingDetail' component={ListingDetailsScreen}/>
+        <Stack.Screen name='ListingDetails' component={ListingDetailsScreen}/>
     </Stack.Navigator>
 )
 
