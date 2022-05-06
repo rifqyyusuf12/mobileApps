@@ -18,16 +18,18 @@ function ListingScreen({ navigation }) {
     const getListingsApi = useApi(listingsApi.getListings)
 
     useEffect(() => {
-        getListingsApi.request(1, 2, 3);
+        getListingsApi.request();
     }, []);
 
 
     return (
         <Screen style={styles.screen} >
-            {getListingsApi.error && <>
-                <AppText>Couldn't retrieve the listings.</AppText>
-                <AppButton title='retry' onPress={getListingsApi.request} />
-            </>}
+      {getListingsApi.error && (
+        <>
+          <AppText>Couldn't retrieve the listings.</AppText>
+          <AppButton title="Retry" onPress={getListingsApi.request} />
+        </>
+      )}
             <ActivityIndicator visible={getListingsApi.loading} />
             <FlatList
             data = {getListingsApi.data}
@@ -36,8 +38,9 @@ function ListingScreen({ navigation }) {
             <AppCard 
             title={item.title}
             subTitle={"$" + item.price}
-            imageURL={item.images[0].url}
+            imageUrl={item.images[0].url}
             onPress={() => navigation.navigate(routes.LISTING_DETAILS, item) }
+            thumbnailUrl={item.images[0].thumbnailUrl}
             />
         }
             />

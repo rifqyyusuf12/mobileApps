@@ -23,14 +23,18 @@ import Screen from './app/components/Screen'
 import AuthNavigator from './app/Navigation/AuthNavigator';
 import navigationTheme from './app/Navigation/navigationTheme';
 import AppNavigator from './app/Navigation/AppNavigator';
+import OfflineNotice from './app/components/OfflineNotice';
 
 
 export default function App() {
 
   return (
+    <>
+    <OfflineNotice />
     <NavigationContainer theme={navigationTheme} >
       <AppNavigator />
     </NavigationContainer>
+    </>
   )
 }
 
