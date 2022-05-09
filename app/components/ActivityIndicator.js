@@ -6,15 +6,25 @@ function ActivityIndicator({ visible = false }) {
     if (!visible) return null;
 
     return (
+      <View style={styles.overlay}>
         <AnimatedLottieView 
         autoPlay
         loop
         source={require('../assets/animation/loader.json')} />
+      </View>
     );
 }
 
 const styles = StyleSheet.create({
-  container: {}
-});
+    overlay: {
+      position: 'absolute',
+      height: '100%',
+      width: '100%',
+      backgroundColor: 'white',
+      zIndex: 1,
+      opacity: 0.8,
+    }
+  }
+);
 
 export default ActivityIndicator;
