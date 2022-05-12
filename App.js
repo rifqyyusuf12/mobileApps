@@ -9,6 +9,9 @@ import AppNavigator from './app/Navigation/AppNavigator';
 import OfflineNotice from './app/components/OfflineNotice';
 import AuthContext from './app/auth/context';
 import authStorage from './app/auth/storage'
+import { navigationRef } from './app/Navigation/rootNavigation';
+import ContactSellerForm from './app/components/ContactSellerForm';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 
 export default function App() {
@@ -29,10 +32,11 @@ export default function App() {
         />
      )
 
+
   return (
     <AuthContext.Provider value={{ user, setUser }}>
     <OfflineNotice />
-    <NavigationContainer theme={navigationTheme} >
+    <NavigationContainer ref={navigationRef} theme={navigationTheme} >
       {user ? <AppNavigator /> : <AuthNavigator /> }
     </NavigationContainer>
     </AuthContext.Provider>
